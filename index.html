@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
+    <link href='./css/main.css' rel='stylesheet' type='text/css'>
+  </head>
+  
+  <body>
+	<div id="st-container" class="st-container">
+		
+		<div class="outer-container">
+			<h1>Hackathon Map Filtering</h1>
+			<div class="inner-container cf">
+				<div class="map-container">
+					<div id="map-canvas"></div>
+				</div>
+				
+				<div class="filter-container-lg">
+					<div>
+						<h2>Filter</h2>
+						<div class="filter-options">
+							<div class="filter-set" style="margin-top:0;">
+								<button id="load-btn" class="load-btn button is-success">Reload data</button>
+							</div>
+							<div class="filter-set">
+								<label>Geo Location:</label>
+								<div class="filter-set">
+									<input type="text" name="latitude" height="30" id="latitude" placeholder="latitude" >
+								</div>
+								<div class="filter-set">
+									<input type="text" name="longitude" height="30" id="longitude" placeholder="longitude">
+								</div>
+								<div class="filter-set">
+									<button id="btn-search" name="btn-search" class="location-select">Search</button>
+ 								</div>
+							</div>
+							<div class="filter-set">
+								<label for="category-select">Category:</label>
+								<select name="category-select" id="category-select" class="category-select">
+									<option value="0">Any</option>
+									<option value="car">Car</option>
+									<option value="mobile">Mobile</option>
+									<option value="home">Home & Furniture</option>
+									<option value="books">Books,Sports & Hobbies</option>
+									<option value="realstate">Real State</option>
+								</select>
+							</div>
+							<div class="filter-set">
+								<label for="from-select">Location:</label>
+								<select name="from-select" id="from-select" class="from-select">
+									<option value="0">Any</option>
+									<option value="delhi">Delhi</option>
+									<option value="bengaluru">Bengaluru</option>
+									<option value="Michigan">Chennai</option>
+									<option value="chennai">Gurgaon</option>
+									<option value="noida">Noida</option>
+									<option value="mumbai">Mumbai</option>
+								</select>
+							</div>
+							<div class="filter-set">
+								Radius: <input type="text" id="radius" value="1000" />
+							</div>
+						</div> <!-- .filter-options -->
+					</div> 
+				</div> <!-- .filter-container-lg -->
+				
+				<div id="status"></div>
+			</div> <!-- .inner-container -->
+		</div> <!-- .outer-container -->
+			
+	</div> <!-- #st-container -->
+	<script src="js/jquery-1.11.3.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+	<script src="js/draw_circle.js"></script>
+
+  </body>
+</html>
